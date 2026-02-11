@@ -1,0 +1,55 @@
+@use "../../abstracts" as *;
+
+.form {
+	input,
+	textarea {
+		&:active,
+		&:focus {
+			outline: none !important;
+			box-shadow: none !important;
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+
+		@include large {
+			flex-direction: row;
+			margin-right: rem(-7.5px);
+			margin-bottom: rem(5px);
+			margin-left: rem(-7.5px);
+		}
+	}
+
+	&__col {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		padding-bottom: rem(15px);
+
+		@include large {
+			flex: 1 1 0;
+			margin-right: rem(7.5px);
+			margin-left: rem(7.5px);
+			padding-bottom: rem(25px);
+		}
+	}
+
+	&__input {
+		width: 100%;
+		height: rem(50px);
+		padding: 0 rem(20px);
+		border: 0;
+		border-radius: rem(10px);
+		background-color: $color-lighter;
+		font-size: rem(16px);
+	}
+
+	&__input:is(textarea) {
+		height: rem(170px);
+		padding: rem(25px) rem(20px);
+		border-radius: rem(10px);
+		line-height: rem(20px);
+	}
+}

@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+@use "sass:color";
+
+.section {
+	&-tagline {
+		display: block;
+		margin-bottom: rem(7.5px);
+		color: color.adjust($color-grey, $lightness: -5%);
+		font-size: rem(18px);
+		font-style: normal;
+		font-weight: $semi-bold;
+
+		@include large {
+			margin-bottom: rem(15px);
+		}
+
+		&::before {
+			content: "•";
+			padding-right: rem(5px);
+			color: $color-primary;
+			font-size: rem(28px);
+		}
+	}
+
+	&-description {
+		color: $color-grey;
+		font-size: rem(16px);
+		line-height: rem(26px);
+
+		@include large {
+			width: 70%;
+			margin: 0 auto rem(30px);
+		}
+
+		strong {
+			color: $color-darker;
+		}
+	}
+
+	.wp-block-heading {
+		margin-bottom: rem(25px);
+		font-size: rem(32px);
+		font-weight: $bold;
+		line-height: rem(48px);
+	}
+}

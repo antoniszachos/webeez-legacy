@@ -1,0 +1,91 @@
+@use "../../abstracts" as *;
+
+.wp-block-button {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	border: 0;
+	border-radius: rem(32px);
+	font-size: rem(18px);
+	font-weight: $semi-bold;
+
+	&.background-primary {
+		background-color: $color-primary;
+
+		&::before {
+			background-color: rgba($color-darker, 0.1);
+		}
+
+		&:hover::before {
+			background-color: $color-darker;
+		}
+	}
+
+	&.background-dark {
+		background-color: $color-darker;
+
+		&::before {
+			background-color: rgba($color-white, 0.1);
+		}
+
+		&:hover::before {
+			background-color: $color-white;
+		}
+
+		&:hover::after {
+			color: $color-darker;
+		}
+
+		.wp-block-button__link:hover {
+			color: $color-darker;
+		}
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: rem(75px);
+		height: 100%;
+		transform: scale(1);
+		transition: 500ms ease;
+		border-radius: rem(32px);
+	}
+
+	&::after {
+		content: "\e910";
+		position: absolute;
+		top: calc(50% + 0.5px);
+		right: rem(25px);
+		transform: translateY(-50%);
+		transition: 500ms ease;
+		color: $color-white;
+		font-family: $font-icons;
+		font-size: rem(11px);
+		line-height: 1;
+	}
+
+	&:hover {
+		color: $color-white;
+
+		&::before {
+			width: 100%;
+			transform: scale(1.5);
+			transition: 1s;
+			border-radius: 0;
+		}
+	}
+
+	&__link {
+		display: block;
+		position: relative;
+		padding: rem(12px) rem(50px) rem(12px) rem(40px);
+		background-color: transparent;
+		color: $color-white;
+
+		&:hover {
+			color: $color-white;
+		}
+	}
+}

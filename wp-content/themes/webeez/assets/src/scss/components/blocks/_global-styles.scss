@@ -1,0 +1,66 @@
+@use "../../abstracts" as *;
+
+.has-white-color {
+	color: $color-white;
+}
+
+.has-black-color {
+	color: $color-black;
+}
+
+.has-primary-color {
+	color: $color-primary;
+}
+
+.has-secondary-color {
+	color: $color-secondary;
+}
+
+.has-white-background-color {
+	background-color: $color-white;
+}
+
+.has-black-background-color {
+	background-color: $color-black;
+}
+
+.has-primary-background-color {
+	background-color: $color-primary;
+}
+
+.has-secondary-background-color {
+	background-color: $color-secondary;
+}
+
+.has-xs-font-size {
+	font-size: rem(12px);
+}
+
+.has-s-font-size {
+	font-size: rem(14px);
+}
+
+.has-base-font-size {
+	font-size: rem(16px);
+}
+
+.has-m-font-size {
+	font-size: rem(18px);
+}
+
+.has-l-font-size {
+	font-size: rem(21px);
+}
+
+.has-xl-font-size {
+	font-size: rem(24px);
+}
+
+.has-xxl-font-size {
+	font-size: rem(32px);
+}
+
+.has-xxxl-font-size {
+	font-size: rem(80px);
+}
+

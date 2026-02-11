@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+.section-parallax {
+	.wp-block-heading {
+		font-size: rem(40px);
+		line-height: rem(52px);
+	}
+
+	.wp-block-buttons {
+		display: flex;
+		justify-content: center;
+		margin-top: rem(50px);
+	}
+
+	.background-primary {
+		.wp-block-button__link:hover {
+			color: $color-darker;
+		}
+
+		&:hover::after {
+			color: $color-darker;
+		}
+
+		&:hover::before {
+			background-color: $color-white;
+		}
+	}
+}

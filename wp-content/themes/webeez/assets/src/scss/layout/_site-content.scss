@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+.site-content {
+	min-height: calc(100vh - 679px);
+
+	&:not(.site-content--home) {
+		padding-top: rem(90px);
+
+		@include large {
+			padding-top: rem(150px);
+		}
+	}
+}

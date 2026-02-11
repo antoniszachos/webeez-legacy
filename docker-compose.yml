@@ -1,0 +1,67 @@
+services:
+  db_legacy:
+    image: mariadb:10.6
+    container_name: webeez-legacy-db
+    restart: always
+    volumes:
+      - db_data_legacy:/var/lib/mysql
+    networks:
+      - web_gateway
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+
+  wordpress_legacy:
+    build: .
+    container_name: webeez-legacy-wordpress
+    restart: always
+    depends_on:
+      - db_legacy
+    expose:
+      - "3000"
+    environment:
+      WORDPRESS_DB_HOST: db_legacy
+      WORDPRESS_DB_USER: ${DB_USER}
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${DB_NAME}
+      WORDPRESS_TABLE_PREFIX: ${DB_PREFIX}
+      WORDPRESS_DEBUG: ${WP_DEBUG}
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+      - ./package.json:/var/www/html/package.json
+      - ./gulpfile.js:/var/www/html/gulpfile.js
+      - ./.htaccess:/var/www/html/.htaccess
+      - node_modules_legacy:/var/www/html/node_modules
+    networks:
+      - web_gateway
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web_gateway"
+      - "traefik.http.routers.webeez-legacy.rule=Host(`legacy.webeez.gr`)"
+      - "traefik.http.routers.webeez-legacy.entrypoints=websecure"
+      - "traefik.http.routers.webeez-legacy.tls.certresolver=myresolver"
+      - "traefik.http.services.webeez-legacy.loadbalancer.server.port=80"
+      - "traefik.http.routers.webeez-legacy.service=webeez-legacy"
+      - "traefik.http.routers.webeez-legacy-bs.rule=Host(`bs-legacy.webeez.gr`)"
+      - "traefik.http.routers.webeez-legacy-bs.entrypoints=websecure"
+      - "traefik.http.routers.webeez-legacy-bs.tls.certresolver=myresolver"
+      - "traefik.http.routers.webeez-legacy-bs.service=webeez-legacy-bs"
+      - "traefik.http.services.webeez-legacy-bs.loadbalancer.server.port=3000"
+      - "traefik.http.middlewares.webeez-legacy-auth.basicauth.users=dev:$$apr1$$Wgob9gvS$$qiLTK55gY3ans08Qta6OD."
+      - "traefik.http.routers.webeez-legacy.middlewares=webeez-legacy-auth"
+    ports:
+    - "8081:80"
+    - "3010:3000"
+    - "3011:3001"
+    - "3013:3003"
+    command: /bin/sh -c "a2enmod headers && docker-entrypoint.sh apache2-foreground"
+
+volumes:
+  db_data_legacy:
+  node_modules_legacy:
+
+networks:
+  web_gateway:
+    external: true

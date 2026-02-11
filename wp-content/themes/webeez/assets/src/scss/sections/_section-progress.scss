@@ -1,0 +1,66 @@
+@use '../abstracts' as *;
+
+.section-progress {
+	padding: rem(30px) rem(15px);
+	background-color: $color-dark;
+	background-image: url("../images/bg-section.png");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: cover;
+
+	@include large {
+		padding: rem(120px);
+	}
+
+	.wp-block-columns {
+		margin: 0;
+	}
+
+	.wp-block-heading {
+		color: $color-white;
+	}
+
+	.wp-block-column:nth-child(odd) {
+		@include large {
+			padding-right: rem(50px);
+		}
+
+		.wp-block-heading {
+			font-size: rem(34px);
+			line-height: rem(42px);
+
+			@include large {
+				font-size: rem(42px);
+				line-height: rem(52px);
+			}
+		}
+
+		.wp-block-group {
+			display: flex;
+			align-items: center;
+		}
+
+		.wp-block-image {
+			margin: 0;
+			overflow: hidden;
+			border: rem(3px) solid $color-white;
+			border-radius: 50%;
+		}
+
+		.signature {
+			margin: 0;
+			padding-left: rem(20px);
+			color: $color-white;
+			font-style: italic;
+			font-weight: $light;
+		}
+	}
+
+	.wp-block-column:nth-child(even) {
+		.wp-block-heading {
+			margin-bottom: rem(20px);
+			font-size: rem(18px);
+			line-height: rem(28px);
+		}
+	}
+}

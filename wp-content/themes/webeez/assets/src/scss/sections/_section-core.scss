@@ -1,0 +1,97 @@
+@use '../abstracts' as *;
+
+.section-core {
+	padding: rem(60px) 0 rem(30px);
+	background-color: $color-dark;
+	background-image: url("../images/bg-section.png");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: cover;
+
+	@include large {
+		padding: rem(120px) 0;
+	}
+
+	.wp-block-heading {
+		color: $color-white;
+		font-size: rem(40px);
+	}
+
+	.wp-block-columns {
+		ul {
+			@include reset-list;
+
+			@include large {
+				margin-left: rem(100px);
+			}
+		}
+
+		li {
+			display: flex;
+			position: relative;
+			z-index: 1;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: rem(15px);
+			padding: rem(20px) rem(90px) rem(20px) rem(30px);
+			border-radius: rem(10px);
+			background-color: rgba($color-white, 0.08);
+			color: $color-white;
+			font-size: rem(17px);
+			font-weight: $bold;
+			line-height: rem(28px);
+
+			@include large {
+				font-size: rem(18px);
+				line-height: rem(50px);
+			}
+		}
+
+		li::after {
+			content: "\e908";
+			position: absolute;
+			top: 50%;
+			right: rem(30px);
+			width: rem(50px);
+			height: rem(50px);
+			transform: translateY(-50%);
+			border-radius: rem(50px);
+			background-color: $color-white;
+			color: $color-primary;
+			font-family: $font-icons;
+			font-size: rem(21px);
+			line-height: rem(50px);
+			text-align: center;
+		}
+	}
+
+	.wp-block-column {
+		.wp-block-group {
+			display: flex;
+		}
+
+		.wp-block-image {
+			width: 25%;
+		}
+
+		p {
+			width: 75%;
+			color: $color-grey-light;
+		}
+
+		img {
+			border-radius: 50%;
+		}
+
+		em {
+			display: inline-block;
+			margin-top: rem(15px);
+			color: $color-white;
+			font-family: $font-stack-alt;
+			font-size: rem(24px);
+			font-style: normal;
+		}
+	}
+
+
+}

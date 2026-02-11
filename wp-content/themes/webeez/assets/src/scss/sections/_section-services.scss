@@ -1,0 +1,129 @@
+@use '../abstracts' as *;
+
+.section-services {
+	padding: rem(60px) 0 rem(30px);
+	background-color: $color-lighter;
+
+	@include large {
+		padding: rem(120px) 0;
+	}
+
+	.section-tagline {
+		text-align: center;
+	}
+
+	.wp-block-heading {
+		margin-bottom: rem(60px);
+		font-size: rem(34px);
+		line-height: rem(44px);
+		text-align: center;
+	}
+
+	&__wrapper {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		margin: rem(30px) rem(-15px) 0;
+		padding-top: rem(75px);
+
+		@include large {
+			flex-direction: row;
+		}
+	}
+
+	&__box {
+		display: flex;
+		visibility: hidden;
+		position: relative;
+		z-index: 2;
+		flex-direction: column;
+		margin: 0 rem(15px) rem(100px);
+		padding: rem(100px) rem(60px) rem(50px);
+		border-radius: rem(10px);
+		background-color: $color-white;
+		box-shadow: 0 rem(10px) rem(60px) 0 rgba($color-black, 0.05);
+		text-align: center;
+
+		@include large {
+			flex: 1 1 0;
+			margin: 0 rem(15px);
+		}
+
+		&-icon {
+			display: flex;
+			position: absolute;
+			z-index: 3;
+			top: rem(-75px);
+			left: 50%;
+			align-items: center;
+			justify-content: center;
+			width: rem(150px);
+			height: rem(150px);
+			margin-bottom: rem(30px);
+			padding: rem(43px);
+			transform: translateX(-50%);
+			transition: all 0.5s ease;
+			border-radius: 50%;
+			background-color: $color-white;
+			box-shadow: 0 rem(10px) rem(60px) 0 rgba($color-black, 0.07);
+		}
+
+		svg {
+			width: rem(64px);
+			height: rem(64px);
+		}
+
+		&-title {
+			margin-bottom: rem(30px);
+			color: $color-dark;
+			font-size: rem(22px);
+			font-weight: $semi-bold;
+			line-height: rem(26px);
+		}
+
+		&-text {
+			margin-bottom: rem(30px);
+		}
+
+		&-link {
+			display: flex;
+			position: relative;
+			align-items: center;
+			justify-content: center;
+			width: rem(65px);
+			height: rem(65px);
+			margin: 0 auto;
+			transition: all 0.5s ease;
+			border-radius: 50%;
+			background-color: $color-lighter;
+			color: $color-dark;
+			font-size: rem(20px);
+		}
+
+		&-icon .fill-primary,
+		&-icon svg {
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&__box:hover {
+		.section-services__box-icon,
+		.section-services__box-link {
+			background-color: $color-primary;
+			color: $color-white;
+		}
+
+		.section-services__box-title {
+			color: $color-primary;
+		}
+
+		.fill-dark {
+			fill: $color-white;
+		}
+
+		.fill-primary,
+		svg {
+			fill: $color-white;
+		}
+	}
+}

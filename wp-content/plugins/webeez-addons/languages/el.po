@@ -1,0 +1,175 @@
+# Copyright (C) 2022 Antonis Zachos
+# This file is distributed under the same license as the Webeez Theme Addons plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Webeez Theme Addons 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/webeez-addons\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-07-25T21:50:50+03:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: webeez-addons\n"
+
+msgid "Page Icon"
+msgstr "Εικονίδιο Σελίδας"
+
+msgid "SVG source code"
+msgstr "Πηγαίος κώδικας SVG"
+
+msgid "No featured services were found"
+msgstr "Δεν βρέθηκαν υπηρεσίες"
+
+msgid "Read More"
+msgstr "Δείτε Περισσότερα"
+
+msgid "Project Details"
+msgstr "Λεπτομέρειες Έργου"
+
+msgid "URL"
+msgstr "Διεύθυνση"
+
+msgid "Client"
+msgstr "Πελάτης"
+
+msgid "All"
+msgstr "Όλα"
+
+# Projects
+
+msgid "Projects"
+msgstr "Έργα"
+
+msgid "Project"
+msgstr "Έργο"
+
+msgid "Project Archives"
+msgstr "Αρχείο Έργων"
+
+msgid "Project Attributes"
+msgstr "Ιδιότητες Έργου"
+
+msgid "Parent Item:"
+msgstr "Γονικό Έργο"
+
+msgid "All Projects"
+msgstr "Όλα τα Έργα"
+
+msgid "Add New Project"
+msgstr "Προσθήκη Νέου Έργου"
+
+msgid "Add new project"
+msgstr "Προσθήκη νέου έργου"
+
+msgid "New Project"
+msgstr "Νέο Έργο"
+
+msgid "Edit Project"
+msgstr "Επεξεργασία Έργου"
+
+msgid "Update Project"
+msgstr "Ενημέρωση Έργου"
+
+msgid "View Project"
+msgstr "Προβολή Έργου"
+
+msgid "View Projects"
+msgstr "Προβολή ¨Εργων"
+
+msgid "Search Project"
+msgstr "Αναζήτηση Έργου"
+
+msgid "No Projects Found"
+msgstr "Δεν βρέθηκαν Έργα"
+
+msgid "No Projects found in Trash"
+msgstr "Δεν βρέθηκαν Έργα στο Διαγραμμένα"
+
+msgid "Featured Image"
+msgstr "Χαρακτηριστική Εικόνα"
+
+msgid "Set featured image"
+msgstr "Ορισμός χαρακτηριστικής εικόνας"
+
+msgid "Remove featured image"
+msgstr "Αφαίρεση χαρακτηριστικής εικόνας"
+
+msgid "Use as featured image"
+msgstr "Χρηση ως χαρακτηριστική εικόνα"
+
+msgid "Insert into project"
+msgstr "Εισαγωγή στο έργο"
+
+msgid "Uploaded to this item"
+msgstr "Μεταφορτώθηκε σε αυτό το έργο"
+
+msgid "Projects list"
+msgstr "Λίστα έργων"
+
+msgid "Projects list navigation"
+msgstr "Πλοήγηση λιστας έργων"
+
+msgid "Filter projects list"
+msgstr "Φίλτρο λιστας έργων"
+
+# Categories
+
+msgid "Categories"
+msgstr "Κατηγορίες"
+
+msgid "Category"
+msgstr "Κατηγορία"
+
+msgid "All Categories"
+msgstr "Όλες οι Κατηγορίες"
+
+msgid "Parent Category"
+msgstr "Γονική Κατηγορία"
+
+msgid "Parent Category:"
+msgstr "Γονική Κατηγορία:"
+
+msgid "New Category Name"
+msgstr "Όνομα Νέας Κατηγορίας"
+
+msgid "Add New Category"
+msgstr "Προσθήκη Νέας Κατηγορίας"
+
+msgid "Edit Category"
+msgstr "Επεξεργασία Κατηγορίας"
+
+msgid "Update Category"
+msgstr "Ενημέρωση Κατηγορίας"
+
+msgid "View Category"
+msgstr "Προβολή Κατηγορίας"
+
+msgid "Separate categories with commas"
+msgstr "Διαχωρίστε τις κατηγορίες με κόμμα"
+
+msgid "Add or remove categories"
+msgstr "Προσθηκη ή αφαίρεση κατηγοριών"
+
+msgid "Choose from the most used"
+msgstr "Επιλέξτε από τις πίο δημοφιλής"
+
+msgid "Popular Categories"
+msgstr "Δημοφιλής Κατηγορίες"
+
+msgid "Search Categories"
+msgstr "Αναζήτηση Κατηγοριών"
+
+msgid "Not Found"
+msgstr "Δεν βρέθηκαν"
+
+msgid "No Categories"
+msgstr "Δεν βρέθηκαν Κατηγορίες"
+
+msgid "Categories list"
+msgstr "Λίστα Κατηγοριών"
+
+msgid "Categories list navigation"
+msgstr "Λίστα Πλοήγησης Κατηγοριών"

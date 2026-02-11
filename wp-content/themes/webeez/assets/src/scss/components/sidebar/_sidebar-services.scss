@@ -1,0 +1,127 @@
+@use "../../abstracts" as *;
+
+.sidebar-services {
+	position: sticky;
+	top: rem(115px);
+	padding-bottom: rem(30px);
+
+	.widget {
+		padding: rem(40px) rem(30px) rem(35px);
+		border-radius: rem(10px);
+
+		.widget-title {
+			margin: 0 0 rem(15px);
+			padding: 0 rem(20px);
+			font-size: rem(18px);
+			line-height: rem(28px);
+		}
+
+		p {
+			padding: 0 rem(20px);
+			color: $color-light;
+			font-size: rem(16px);
+			line-height: rem(26px);
+		}
+
+		.menu {
+			flex-direction: column;
+		}
+	}
+
+	.widget_nav_menu {
+		margin-bottom: rem(30px);
+		background-color: $color-lighter;
+
+		.menu-item {
+			margin-bottom: rem(5px);
+		}
+
+		a {
+			display: block;
+			padding: rem(2.5px) rem(20px);
+			transition: all 0.3s ease;
+			border-radius: rem(10px);
+			color: $color-grey;
+			font-size: rem(16px);
+		}
+
+		a:hover {
+			background-color: $color-white;
+			box-shadow: 0 rem(10px) rem(60px) 0 rgba($color-black, 0.05);
+			color: $color-darker;
+			text-decoration: none;
+			text-shadow: 0 0 rem(1px) $color-grey;
+		}
+	}
+
+	.current-menu-item {
+		a {
+			background-color: $color-white;
+			box-shadow: 0 rem(10px) rem(60px) 0 rgba($color-black, 0.05);
+			color: $color-darker;
+			text-shadow: 0 0 rem(1px) $color-grey;
+		}
+	}
+
+	.widget_text {
+		position: relative;
+		background-color: $color-darker;
+		background-image: url("../images/bg-sidebar.jpg");
+		background-repeat: no-repeat;
+		background-position: 50%;
+		background-size: cover;
+		background-blend-mode: overlay;
+
+		.widget-title {
+			color: $color-white;
+		}
+
+		a {
+			display: block;
+			position: relative;
+			color: $color-white;
+			font-size: rem(20px);
+			font-weight: $semi-bold;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $color-primary;
+			text-decoration: none;
+		}
+
+		[href^="tel:"],
+		[href^="mailto:"] {
+			display: flex;
+			align-items: center;
+		}
+
+		[href^="tel:"]::before,
+		[href^="mailto:"]::before {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(40px);
+			height: rem(40px);
+			margin-right: rem(15px);
+			transition: all 0.3s ease 0s;
+			border-radius: 50%;
+			background-color: rgba($color-white, 0.2);
+			font-family: $font-icons;
+			font-weight: $regular;
+		}
+
+		[href^="tel:"]::before {
+			content: "\ebb3";
+		}
+
+		[href^="mailto:"]::before {
+			content: "\eb53";
+		}
+
+		[href^="tel:"]:hover::before,
+		[href^="mailto:"]:hover::before {
+			background-color: $color-white;
+		}
+	}
+}

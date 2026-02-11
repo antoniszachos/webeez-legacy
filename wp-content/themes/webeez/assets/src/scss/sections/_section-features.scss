@@ -1,0 +1,96 @@
+@use '../abstracts' as *;
+
+.section-features {
+	padding: rem(25px) 0;
+
+	@include large {
+		padding: rem(60px) 0;
+	}
+
+	.wp-block-columns {
+		display: flex;
+		position: relative;
+		padding: rem(78px) 0 rem(46px);
+		overflow: hidden;
+		border: rem(1px) solid $color-light;
+		border-radius: rem(10px);
+		box-shadow: 0 rem(10px) rem(60px) 0 rgba($color-black, 0.05);
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: rem(-124px);
+			left: rem(-55px);
+			width: rem(185px);
+			height: rem(185px);
+			animation: 1s 1s fadeInUp both;
+			border-radius: 50%;
+			background-color: $color-primary;
+		}
+	}
+
+	.wp-block-column {
+		display: flex;
+		visibility: hidden;
+		position: relative;
+		flex: 1 1 0;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		&:not(:first-child)::after {
+			content: "";
+			position: absolute;
+			top: rem(1px);
+			bottom: rem(11px);
+			left: 0;
+			width: rem(1px);
+			background-color: $color-light;
+		}
+
+		svg {
+			width: rem(64px);
+			height: rem(64px);
+			margin-bottom: rem(20px);
+			transition: all 0.3s ease-in-out;
+		}
+
+		&:hover svg {
+			transform: scale(1.2);
+		}
+
+		p {
+			color: $color-grey;
+			font-size: rem(16px);
+			font-weight: $medium;
+		}
+
+		.odometer-wrap {
+			display: flex;
+			color: $color-dark;
+			font-size: rem(38px);
+			font-weight: $medium;
+			line-height: rem(38px);
+		}
+
+		.odometer {
+			color: $color-dark;
+			font-size: rem(38px);
+			font-weight: $medium;
+			line-height: rem(38px);
+			text-align: center;
+		}
+	}
+
+	.wp-block-column:nth-child(2) {
+		animation-delay: 0.25s;
+	}
+
+	.wp-block-column:nth-child(3) {
+		animation-delay: 0.5s;
+	}
+
+	.wp-block-column:nth-child(4) {
+		animation-delay: 0.75s;
+	}
+}

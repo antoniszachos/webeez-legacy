@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+* {
+	outline: 0;
+}
+
+body {
+	a {
+		transition: all 0.3s ease 0s;
+		text-decoration: none;
+	}
+
+	.sr-only {
+		display: none;
+	}
+
+	p,
+	li,
+	td {
+		> a {
+			color: $color-primary;
+		}
+
+		> a:hover {
+			color: $color-primary;
+			text-decoration: underline;
+		}
+	}
+}
+
+

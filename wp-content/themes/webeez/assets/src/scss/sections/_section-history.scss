@@ -1,0 +1,96 @@
+@use '../abstracts' as *;
+@use "sass:color";
+
+.section-history {
+	padding: rem(50px) 0;
+
+	@include large {
+		padding: rem(120px) 0;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	strong {
+		font-weight: $bold;
+	}
+
+	.section-tagline {
+		text-align: center;
+	}
+
+	.slider-history {
+		p {
+			font-size: rem(17px);
+			font-weight: $light;
+			cursor: pointer;
+
+			@include large {
+				padding: 0 rem(150px);
+				text-align: center;
+			}
+		}
+	}
+
+	.slider-paging {
+		@include reset-list;
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: rem(9.5px);
+
+		@include large {
+			margin: 0 rem(150px);
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: rem(3px);
+			background-color: $color-lighter;
+		}
+
+		li {
+			@include reset-list;
+			position: relative;
+			margin-bottom: 0;
+			padding: 0;
+			transition: color 0.3s ease-in-out;
+			color: color.adjust($color-grey, $lightness: 35%);
+			font-weight: $semi-bold;
+			line-height: rem(36px);
+			cursor: pointer;
+		}
+
+		li::before {
+			content: "";
+			position: absolute;
+			z-index: 1;
+			top: unset;
+			bottom: 0;
+			left: 50%;
+			width: rem(16px);
+			height: rem(16px);
+			transform: translate(-50%, 100%);
+			transition: transform 0.3s ease-in-out;
+			border-radius: 50%;
+			background-color: $color-primary;
+		}
+
+		.selected,
+		li:hover {
+			color: $color-darker;
+		}
+
+		.selected::before,
+		li:hover::before {
+			transform: translate(-50%, 100%) scale(1.4);
+		}
+	}
+}

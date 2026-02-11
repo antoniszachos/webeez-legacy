@@ -1,0 +1,120 @@
+@use '../abstracts' as *;
+
+.section-expertise {
+	padding: 0 0 rem(15px);
+
+	@include large {
+		padding: rem(50px) 0;
+	}
+
+	&__wrapper {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+
+		@include large {
+			flex-direction: row;
+			margin: 0 rem(-15px);
+			padding: rem(50px) 0;
+		}
+	}
+
+	&__box {
+		display: flex;
+		visibility: hidden;
+		position: relative;
+		z-index: 2;
+		flex-direction: column;
+		margin: 0 0 rem(15px);
+		padding: rem(40px) rem(40px) rem(15px);
+		overflow: hidden;
+		border-radius: rem(10px);
+		background-color: $color-white;
+		box-shadow: 0 rem(10px) rem(60px) 0 rgba($color-black, 0.05);
+
+		@include large {
+			flex: 1 1 0;
+			margin: 0 rem(15px);
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			right: 0;
+			width: rem(120px);
+			height: rem(120px);
+			transform: translate(50%, -50%);
+			transition: all 0.3s ease-in-out;
+			border-radius: 50%;
+			background-color: $color-primary;
+		}
+
+		&:hover::before {
+			width: 100%;
+			height: 100%;
+			transform: translate(0, 0);
+			border-radius: 0;
+		}
+
+		&-icon {
+			z-index: 3;
+			width: rem(64px);
+			height: rem(64px);
+			margin-bottom: rem(30px);
+			transform-origin: left center;
+			transition: all 0.3s ease-in-out;
+		}
+
+		&:hover &-icon {
+			transform: scale(1.2);
+		}
+
+		&-icon .fill-primary,
+		&-icon svg {
+			transition: all 0.3s ease-in-out;
+		}
+
+
+		&:hover &-icon .fill-primary,
+		&:hover &-icon svg {
+			fill: $color-white;
+		}
+
+		&-title {
+			z-index: 3;
+			margin-bottom: rem(30px);
+			color: $color-dark;
+			font-size: rem(19px);
+			font-weight: $semi-bold;
+			line-height: rem(23px);
+		}
+
+		&-text {
+			z-index: 3;
+			margin-bottom: rem(30px);
+			font-size: rem(16px);
+			line-height: 1.8;
+		}
+
+		&-link {
+			z-index: 3;
+			color: $color-dark;
+		}
+
+		&-title,
+		&-text,
+		&-link {
+			transition: all 0.3s ease-in-out;
+		}
+
+		&:hover &-title,
+		&:hover &-text,
+		&:hover &-link {
+			color: $color-white;
+		}
+
+
+	}
+}

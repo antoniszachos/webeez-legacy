@@ -1,0 +1,86 @@
+@use '../abstracts' as *;
+
+.site-main {
+	&--default {
+		position: relative;
+	}
+
+	.list-check {
+		@include reset-list;
+		margin: rem(30px) 0;
+
+		li {
+			position: relative;
+			margin-bottom: rem(7.5px);
+			padding-left: rem(30px);
+			color: $color-darker;
+			font-weight: $bold;
+			line-height: rem(36px);
+		}
+
+		li::before {
+			content: "\e908";
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: $color-primary;
+			font-family: $font-icons;
+		}
+	}
+
+	&--service {
+		p,
+		li {
+			color: $color-grey-dark;
+			line-height: rem(32px);
+		}
+
+		h1 {
+			margin-bottom: rem(20px);
+			font-size: rem(26px);
+			line-height: rem(36px);
+		}
+
+		h2 {
+			margin: rem(25px) 0 rem(20px);
+			font-size: rem(23px);
+			line-height: rem(33px);
+		}
+
+		h3 {
+			margin-bottom: rem(15px);
+			font-size: rem(21px);
+			line-height: rem(31px);
+		}
+
+		h4 {
+			margin-bottom: rem(10px);
+			font-size: rem(18px);
+			line-height: rem(28px);
+		}
+
+		.section-cta {
+			margin-top: rem(50px);
+		}
+	}
+
+	.featured-image {
+		margin-bottom: rem(30px);
+
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: rem(10px);
+			object-fit: cover;
+		}
+	}
+
+	.featured-icon {
+		margin-bottom: rem(30px);
+
+		svg {
+			width: rem(65px);
+			height: auto;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.site-branding {
+	display: flex;
+	align-items: center;
+
+	.site-logo {
+		display: inline-flex;
+		align-items: center;
+		width: 100%;
+
+		svg {
+			width: rem(30px);
+			height: rem(30px);
+			margin-right: rem(10px);
+		}
+
+		span {
+			margin-bottom: rem(7.5px);
+			color: $color-white;
+			font-size: rem(38px);
+			font-weight: $bold;
+			text-transform: lowercase;
+		}
+
+		.fill-white {
+			fill: rgba($color-white, 0.25);
+		}
+	}
+}

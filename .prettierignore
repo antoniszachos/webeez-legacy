@@ -1,0 +1,18 @@
+# Αγνοούμε φακέλους συστήματος & βιβλιοθήκες
+node_modules/
+dist/
+vendor/
+.git/
+
+# Αγνοούμε WordPress Core (Πολύ σημαντικό!)
+wp-admin/
+wp-includes/
+*.php
+
+# Αγνοούμε αρχεία ρυθμίσεων Docker
+Dockerfile
+docker-compose.yml
+
+# Αγνοούμε τα assets που είναι ήδη compiled
+**/*.min.js
+**/*.min.css

@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+.section-brands {
+	padding: rem(50px) 0;
+
+	@include large {
+		padding: rem(100px) 0;
+	}
+
+	&.section-brands--border {
+		border-top: rem(1px) solid $color-lighter;
+
+		@include large {
+			padding: rem(50px) 0;
+		}
+	}
+
+	.slider-brands {
+		display: flex;
+	}
+
+	figure {
+		display: flex !important;
+		justify-content: center;
+		padding: 0 rem(7.5px);
+
+		@include large {
+			margin: 0;
+		}
+
+		img {
+			max-width: 100%;
+			border-radius: rem(10px);
+		}
+	}
+}

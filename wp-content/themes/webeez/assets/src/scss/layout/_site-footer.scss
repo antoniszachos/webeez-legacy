@@ -1,0 +1,225 @@
+@use '../abstracts' as *;
+
+.site-footer {
+	background-color: $color-dark;
+	background-image: url("../images/bg-section.png");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: cover;
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	&__top {
+		padding: rem(50px) 0 0;
+
+		@include large {
+			padding: rem(100px) 0;
+		}
+	}
+
+	&__top-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		width: 100%;
+
+		@include large {
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+	}
+
+	&__widget {
+		visibility: hidden;
+		margin-bottom: rem(15px);
+		color: $color-grey;
+
+		@include large {
+			margin-bottom: 0;
+		}
+
+		.site-logo {
+			width: rem(150px);
+			height: rem(30px);
+		}
+
+		&:nth-child(1) {
+			@include large {
+				flex-basis: 25%;
+				padding-right: rem(60px);
+			}
+		}
+
+		&:nth-child(2) {
+			@include large {
+				flex-basis: 15%;
+				padding-right: rem(60px);
+			}
+		}
+
+		&:nth-child(3) {
+			@include large {
+				flex-basis: 25%;
+				padding-right: rem(60px);
+			}
+		}
+
+		&:nth-child(4) {
+			flex-basis: 100%;
+			width: 100%;
+
+			@include large {
+				flex-basis: 35%;
+			}
+		}
+
+		.widget-title {
+			margin-bottom: rem(15px);
+			color: $color-white;
+			font-size: rem(17px);
+			font-weight: $bold;
+			letter-spacing: rem(0.4px);
+			line-height: rem(31px);
+
+			@include large {
+				margin-bottom: rem(30px);
+			}
+		}
+
+		.widget_mailerlite_widget {
+			width: 100%;
+		}
+	}
+
+	.textwidget {
+		margin-bottom: rem(15px);
+		color: $color-grey-light;
+		font-size: rem(16px);
+		line-height: rem(28px);
+
+		a {
+			color: $color-grey-light;
+		}
+
+		a:hover {
+			color: $color-grey;
+		}
+	}
+
+	.site-branding {
+		margin-bottom: rem(15px);
+	}
+
+	.nav-social {
+		.menu-item {
+			margin-right: rem(10px);
+		}
+
+		a {
+			width: rem(36px);
+			height: rem(36px);
+			transition: background-color 0.3s ease;
+			border-radius: 50%;
+			background-color: $color-darker;
+			color: $color-grey-light;
+		}
+
+		a:hover {
+			background-color: $color-primary;
+			color: $color-white;
+		}
+	}
+
+	&__bottom {
+		&-breadcrumbs {
+			display: flex;
+			padding-bottom: rem(5px);
+			overflow-x: auto;
+			white-space: nowrap;
+		}
+
+		.breadcrumbs-title {
+			display: inline-block;
+			padding-right: rem(10px);
+			color: $color-white;
+			font-size: rem(16px);
+		}
+
+		&-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: rem(15px) 0;
+			border-top: rem(1px) solid rgba($color-white, 0.3);
+
+			@include large {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		}
+
+		&-left {
+			display: flex;
+		}
+
+		.textwidget {
+			margin-left: rem(5px);
+		}
+
+		p {
+			margin: 0;
+			color: $color-grey-light;
+			font-size: rem(14px);
+		}
+
+		a {
+			color: $color-grey-light;
+			font-size: rem(14px);
+		}
+
+		a:hover {
+			color: $color-light;
+		}
+
+		.menu {
+			flex-direction: column;
+
+			@include large {
+				flex-direction: row;
+			}
+		}
+
+		.menu-item {
+			text-align: center;
+		}
+
+		.menu-item:not(:first-child) {
+			@include large {
+				position: relative;
+				margin-left: rem(10px);
+				padding-left: rem(10px);
+			}
+		}
+
+		.menu-item:not(:first-child)::before {
+			@include large {
+				content: "|";
+				position: absolute;
+				top: rem(1px);
+				left: 0;
+				color: $color-grey-light;
+			}
+		}
+	}
+
+	.nav-terms {
+		a {
+			font-size: rem(14px);
+		}
+	}
+}

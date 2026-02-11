@@ -1,0 +1,8 @@
+@use "../../abstracts" as *;
+
+.nav {
+	ul {
+		@include reset-list;
+		display: flex;
+	}
+}

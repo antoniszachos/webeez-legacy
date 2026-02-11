@@ -1,0 +1,164 @@
+@use '../abstracts' as *;
+
+.section-testimonials {
+	position: relative;
+	padding: rem(60px) 0 rem(30px);
+
+	@include large {
+		padding: rem(120px)0 rem(60px);
+	}
+
+	.wp-block-heading {
+		font-size: rem(32px);
+		line-height: rem(42px);
+
+		@include large {
+			font-size: rem(38px);
+			line-height: rem(48px);
+		}
+	}
+
+	.wp-block-buttons {
+		margin: rem(30px) 0;
+
+		@include large {
+			margin: rem(30px) 0 0;
+		}
+	}
+
+	.slider-customers {
+		width: 100%;
+		margin-bottom: rem(15px);
+
+		@include large {
+			width: rem(410px);
+		}
+
+		img {
+			border-radius: 50%;
+		}
+
+		.wp-block-image {
+			position: relative;
+			margin-right: rem(20px);
+			cursor: pointer;
+		}
+
+		.wp-block-image::after {
+			content: "\e90a";
+			display: flex;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			align-items: center;
+			justify-content: center;
+			width: rem(30px);
+			height: rem(30px);
+			transform: scale(0);
+			transition: all 0.5s ease;
+			border-radius: 50%;
+			background-color: $color-primary;
+			color: $color-white;
+			font-family: $font-icons;
+		}
+
+		.slick-current::after {
+			transform: scale(1);
+		}
+	}
+
+	.slider-testimonials {
+		p {
+			font-size: rem(16px);
+			font-weight: $light;
+			line-height: rem(24px);
+		}
+
+		strong {
+			color: $color-darker;
+			font-size: rem(16px);
+			font-weight: $bold;
+			line-height: rem(24px);
+		}
+
+		a {
+			display: block;
+			color: $color-darker;
+			font-size: rem(16px);
+			line-height: rem(26px);
+			text-decoration: none;
+		}
+
+		em {
+			color: $color-secondary;
+			font-size: rem(16px);
+		}
+	}
+
+	.slick-dots {
+		@include reset-list;
+		display: flex;
+		position: absolute;
+		right: 50%;
+		bottom: rem(-30px);
+		justify-content: flex-end;
+		transform: translateX(50%);
+
+		@include large {
+			right: 0;
+			bottom: 0;
+			transform: translateX(0);
+		}
+
+		button {
+			display: block;
+			width: rem(12px);
+			height: rem(12px);
+			margin-left: rem(10px);
+			padding: 0;
+			overflow: hidden;
+			transition: all 0.3s linear;
+			border: rem(2px) solid transparent;
+			border-radius: 50%;
+			background-color: $color-light;
+			text-indent: rem(-9999999px);
+		}
+	}
+
+	.slick-active {
+		button {
+			border-color: $color-primary;
+			background-color: $color-white;
+		}
+	}
+
+	.wp-block-column:first-child {
+		@include large {
+			padding-right: rem(30px);
+		}
+	}
+
+	.wp-block-column:last-child {
+		padding: rem(15px) 0 0;
+
+		@include large {
+			padding: 0 rem(30px) 0 0;
+		}
+	}
+
+	.background-dark {
+
+		&:hover::before {
+			background-color: $color-primary;
+		}
+
+		&:hover::after {
+			color: $color-white;
+		}
+
+		.wp-block-button__link:hover {
+			color: $color-white;
+		}
+	}
+}
+

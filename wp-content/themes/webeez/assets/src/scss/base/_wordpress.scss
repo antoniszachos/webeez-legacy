@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+
+.wp-caption {
+	max-width: 100%;
+	margin-bottom: rem(24px);
+
+	.wp-caption-text {
+		margin: rem(12px);
+	}
+}
+
+.sticky {
+	display: block;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+.screen-reader-text {
+	display: none;
+}
+
+.alignleft {
+	margin-right: rem(24px);
+	margin-bottom: rem(24px);
+	float: left;
+}
+
+.alignright {
+	margin-bottom: rem(24px);
+	margin-left: rem(24px);
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-right: auto;
+	margin-bottom: rem(24px);
+	margin-left: auto;
+	clear: both;
+}

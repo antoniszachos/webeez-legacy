@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+#cmplz-document {
+	max-width: 100%;
+	font-size: rem(18px);
+	line-height: rem(28px);
+
+	p,
+	li,
+	td {
+		font-size: rem(18px);
+		line-height: rem(28px);
+	}
+}
+
+.editor-styles-wrapper {
+	.cmplz-unlinked-mode {
+		max-width: 100%;
+
+		p,
+		li,
+		td {
+			font-size: rem(18px);
+			line-height: rem(28px);
+		}
+	}
+}

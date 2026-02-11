@@ -1,0 +1,113 @@
+@use '../abstracts' as *;
+
+@font-face {
+	font-family: $font-icons;
+	src: url("../icons/icomoon.woff?yu89rg") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+  }
+
+[class^="icon-"],
+[class*=" icon-"] {
+	font-family: $font-icons;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mail-send::before {
+	content: "\eb53";
+}
+
+.icon-phone-call::before {
+	content: "\ebb3";
+}
+
+.icon-chevron-right::before {
+	content: "\e913";
+}
+
+.icon-chevron-left::before {
+	content: "\e914";
+}
+
+.icon-close::before {
+	content: "\e912";
+}
+
+.icon-magnifying-glass::before {
+	content: "\e90d";
+}
+
+.icon-right-arrow::before {
+	content: "\e910";
+}
+
+.icon-left-arrow::before {
+	content: "\e911";
+}
+
+.icon-plus::before {
+	content: "\e906";
+}
+
+.icon-chat-bubble-dots::before {
+	content: "\e90f";
+}
+
+.icon-user-solid-circle::before {
+	content: "\e90e";
+}
+
+.icon-play::before {
+	content: "\e90c";
+}
+
+.icon-chevron-up::before {
+	content: "\e90b";
+}
+
+.icon-checkmark::before {
+	content: "\e908";
+}
+
+.icon-chevron-down::before {
+	content: "\e907";
+}
+
+.icon-quote::before {
+	content: "\e90a";
+}
+
+.icon-paperplane::before {
+	content: "\e909";
+}
+
+.icon-pinterest::before {
+	content: "\e905";
+}
+
+.icon-twitter::before {
+	content: "\e904";
+}
+
+.icon-youtube::before {
+	content: "\e900";
+}
+
+.icon-linkedin::before {
+	content: "\e901";
+}
+
+.icon-instagram::before {
+	content: "\e902";
+}
+
+.icon-facebook::before {
+	content: "\e903";
+}

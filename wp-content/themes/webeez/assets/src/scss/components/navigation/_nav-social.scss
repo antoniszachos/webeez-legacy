@@ -1,0 +1,45 @@
+@use "../../abstracts" as *;
+
+.nav-social {
+	.menu-item {
+		margin-right: rem(10px);
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 0;
+		}
+
+		a::before {
+			display: block;
+			transition: color 0.3s ease;
+			font-family: $font-icons;
+			font-size: rem(13px);
+		}
+	}
+
+	.facebook a::before {
+		content: "\e903";
+	}
+
+	.linkedin a::before {
+		content: "\e901";
+	}
+
+	.twitter a::before {
+		content: "\e904";
+	}
+
+	.instagram a::before {
+		content: "\e902";
+	}
+
+	.pinterest a::before {
+		content: "\e905";
+	}
+
+	.youtube a::before {
+		content: "\e900";
+	}
+}

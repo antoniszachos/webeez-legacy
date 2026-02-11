@@ -1,0 +1,29 @@
+@use "../../abstracts" as *;
+
+.form-contact {
+	@include large {
+		width: 70%;
+		margin: rem(30px) auto;
+	}
+
+	.btn-brand {
+		margin: 0 auto;
+	}
+
+	p {
+		font-size: rem(14px);
+		font-style: italic;
+	}
+
+	.wpcf7-not-valid-tip {
+		margin-top: rem(5px);
+		font-size: rem(14px);
+	}
+
+	.wpcf7-response-output {
+		padding: rem(10px) rem(20px) !important;
+		border-radius: rem(10px);
+		font-size: rem(14px);
+		font-weight: $medium;
+	}
+}

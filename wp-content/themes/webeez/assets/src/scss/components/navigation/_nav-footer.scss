@@ -1,0 +1,45 @@
+@use "../../abstracts" as *;
+
+.nav-footer {
+	.menu {
+		flex-direction: column;
+	}
+
+	.menu-item {
+		margin-bottom: rem(14px);
+
+		a {
+			display: block;
+			position: relative;
+			color: $color-grey-light;
+			font-size: rem(16px);
+			line-height: rem(22px);
+		}
+
+		a::before {
+			content: "";
+			position: absolute;
+			top: rem(6px);
+			left: 0;
+			width: rem(6px);
+			height: rem(6px);
+			transition: opacity 0.3s ease;
+			border-radius: 50%;
+			opacity: 0;
+			background-color: $color-primary;
+		}
+
+		a:hover {
+			padding-left: rem(15px);
+			color: $color-white;
+			font-weight: $bold;
+		}
+
+		a:hover::before {
+			opacity: 1;
+		}
+	}
+
+
+
+}

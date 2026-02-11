@@ -1,0 +1,56 @@
+@use "../../abstracts" as *;
+
+.accordion {
+	.wp-block-group {
+		display: block;
+		position: relative;
+		margin-bottom: rem(20px);
+		border-radius: rem(10px);
+		background-color: $color-white;
+
+		h3 {
+			position: relative;
+			margin: 0;
+			color: $color-dark;
+			font-size: rem(18px);
+			font-weight: $bold;
+			line-height: rem(24px);
+		}
+
+		p {
+			position: relative;
+			margin: 0;
+			padding: rem(20px) rem(40px) rem(31px);
+		}
+
+		&.active .wp-block-heading {
+			border-bottom: rem(1px) solid $color-light;
+		}
+
+		&.active .wp-block-heading::after {
+			transform: translateY(-50%) rotate(0);
+			color: $color-primary;
+		}
+
+		&:not(:first-child) p {
+			display: none;
+		}
+
+		.wp-block-heading {
+			display: block;
+			position: relative;
+			padding: rem(21px) rem(40px);
+			cursor: pointer;
+		}
+
+		.wp-block-heading::after {
+			content: "\e907";
+			position: absolute;
+			top: 50%;
+			right: rem(20px);
+			transform: translateY(-50%) rotate(-180deg);
+			transition: all 0.3s ease-in-out;
+			font-family: $font-icons;
+		}
+	}
+}

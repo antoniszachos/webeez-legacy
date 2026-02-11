@@ -1,0 +1,50 @@
+@use "../../abstracts" as *;
+@use "sass:color";
+
+.nav-contact {
+	.menu {
+		flex-direction: column;
+	}
+
+	.menu-item {
+		margin-bottom: rem(10px);
+	}
+
+	.address {
+		margin-bottom: rem(15px);
+		padding: 0 rem(45px) rem(15px) 0;
+		border-bottom: rem(1px) solid rgba($color-white, 0.3);
+
+		a {
+			color: $color-grey-light;
+			font-size: rem(16px);
+		}
+
+		a:hover {
+			color: $color-white;
+		}
+	}
+
+	.telephone {
+		a {
+			color: $color-white;
+			font-size: rem(18px);
+			font-weight: $bold;
+		}
+
+		a:hover {
+			color: $color-grey-light;
+		}
+	}
+
+	.email {
+		a {
+			color: $color-primary;
+		}
+
+		a:hover {
+			color: color.adjust($color-primary, $lightness: -20%);
+		}
+	}
+
+}

@@ -1,0 +1,8 @@
+@use 'typography' as *;
+@use 'sass:math';
+
+// Calculate rem values
+@function rem($target, $context: $base-size) {
+	// @return ($target / $context) * 1rem;
+	@return  math.div($target, $context) * 1rem;
+}

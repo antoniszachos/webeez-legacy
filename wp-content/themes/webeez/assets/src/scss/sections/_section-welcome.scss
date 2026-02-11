@@ -1,0 +1,236 @@
+@use '../abstracts' as *;
+
+.section-welcome {
+	position: relative;
+	padding: rem(60px) 0 rem(30px);
+
+	@include large {
+		padding: rem(120px) 0;
+	}
+
+	.wp-block-columns {
+		margin: 0;
+
+		.wp-block-column {
+			position: relative;
+		}
+
+		.wp-block-heading {
+			font-size: rem(44px);
+			font-weight: $ultra-bold;
+		}
+
+		.wp-block-image {
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: 0 0 rem(40px);
+			overflow: hidden;
+			border-radius: 50%;
+
+			@include large {
+				width: rem(530px);
+				height: rem(530px);
+				margin: 0;
+			}
+		}
+
+		.wp-block-image::before,
+		.wp-block-image::after {
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+		}
+
+		.wp-block-image::before {
+			bottom: rem(-50px);
+			left: rem(110px);
+			width: rem(167px);
+			height: rem(167px);
+			transform-origin: center bottom;
+			animation-name: bounce;
+			animation-duration: 5s;
+			animation-timing-function: ease-out;
+			animation-iteration-count: infinite;
+			border: rem(1px) solid $color-white;
+			animation-fill-mode: both;
+
+			@include large {
+				bottom: rem(-50px);
+				left: rem(170px);
+				width: rem(234px);
+				height: rem(236px);
+			}
+		}
+
+		.wp-block-image::after {
+			bottom: rem(-50px);
+			left: 50%;
+			width: rem(132px);
+			height: rem(132px);
+			transform-origin: center bottom;
+			animation-name: shake;
+			animation-duration: 5s;
+			animation-timing-function: ease-out;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+			background-color: $color-primary;
+			animation-fill-mode: both;
+
+			@include large {
+				bottom: rem(-60px);
+				left: 50%;
+				width: rem(182px);
+				height: rem(182px);
+			}
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		ul {
+			@include reset-list;
+			display: flex;
+			flex-direction: column;
+			margin: rem(15px) 0;
+
+			@include large {
+				flex-direction: row;
+				margin: 0 rem(-7.5px) rem(30px);
+			}
+		}
+
+		li {
+			display: flex;
+			flex: 1 1 auto;
+			align-items: center;
+			margin: 0 0 rem(15px);
+			padding: rem(15px) rem(25px);
+			border: rem(1px) solid $color-light;
+			border-radius: rem(12px);
+			color: $color-dark;
+			font-weight: $bold;
+
+			@include large {
+				margin: 0 rem(7.5px);
+				padding: rem(25px) rem(35px);
+			}
+		}
+
+		li::before {
+			content: "\e908";
+			margin-right: rem(25px);
+			color: $color-primary;
+			font-family: $font-icons;
+			font-size: rem(21px);
+		}
+
+		p {
+			color: $color-grey;
+			font-size: rem(18px);
+			line-height: rem(28px);
+
+			@include large {
+				font-size: rem(18px);
+				line-height: rem(34px);
+			}
+		}
+
+		strong {
+			color: $color-darker;
+		}
+
+		.wp-block-buttons {
+			margin-top: rem(30px);
+		}
+	}
+
+	.figure-caption {
+		display: flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: rem(120px);
+		height: rem(120px);
+		border-radius: 50%;
+		background-color: $color-white;
+		box-shadow: 0 0 rem(25px) rem(15px) rgba($color-darker, 0.04);
+
+		@include large {
+			top: rem(25px);
+			left: rem(-25px);
+			width: rem(174px);
+			height: rem(174px);
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: rem(100px);
+			height: rem(100px);
+			transform: translate(-50%, -50%);
+			border: rem(2px) dashed $color-light;
+			border-radius: 50%;
+
+			@include large {
+				width: rem(140px);
+				height: rem(140px);
+			}
+		}
+
+		p {
+			margin: 0;
+			line-height: 1;
+			text-align: center;
+		}
+
+		em {
+			display: inline-block;
+			padding: 0 rem(15px);
+			color: $color-darker;
+			font-size: rem(14px);
+			font-style: normal;
+			font-weight: $semi-bold;
+			line-height: rem(18px);
+
+			@include large {
+				padding: 0 rem(30px);
+				font-size: rem(16px);
+				line-height: rem(24px);
+			}
+		}
+
+		strong {
+			display: inline-block;
+			margin-left: rem(3px);
+			color: $color-primary;
+			font-size: rem(24px);
+			font-weight: $semi-bold;
+		}
+
+		.odometer {
+			color: $color-primary;
+			font-size: rem(26px);
+			font-weight: $semi-bold;
+			line-height: 1;
+
+			@include large {
+				font-size: rem(36px);
+			}
+		}
+
+		.wp-block-group {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}

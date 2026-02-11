@@ -1,0 +1,167 @@
+@use '../abstracts' as *;
+
+.section-contact {
+	padding: rem(60px) 0 rem(30px);
+
+	@include large {
+		padding: rem(120px) 0;
+	}
+
+	.wp-block-video {
+		position: relative;
+		z-index: 1;
+
+		&::before,
+		&::after {
+			content: "";
+			display: none;
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			left: 0;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+
+			@include large {
+				display: block;
+			}
+		}
+
+		&::before {
+			width: rem(339px);
+			height: rem(339px);
+			background-color: $color-lighter;
+		}
+
+		&::after {
+			width: rem(162px);
+			height: rem(162px);
+			background-color: $color-primary;
+		}
+
+		video {
+			position: relative;
+			z-index: 3;
+			margin: 0;
+			border-radius: rem(10px);
+		}
+	}
+
+	.columns-outer {
+		.wp-block-column:last-child {
+			@include large {
+				padding-left: rem(40px);
+			}
+		}
+
+		a {
+			color: $color-darker;
+		}
+
+		a:hover {
+			color: $color-primary;
+			text-decoration: none;
+		}
+
+		[href^="tel:"],
+		[href^="mailto:"] {
+			display: flex;
+			align-items: center;
+		}
+
+		[href^="tel:"]::before,
+		[href^="mailto:"]::before {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(40px);
+			height: rem(40px);
+			margin-right: rem(15px);
+			transition: all 0.3s ease 0s;
+			border-radius: 50%;
+			background-color: rgba($color-darker, 0.1);
+			font-family: $font-icons;
+			font-weight: $regular;
+		}
+
+		[href^="tel:"]::before {
+			content: "\ebb3";
+		}
+
+		[href^="mailto:"]::before {
+			content: "\eb53";
+		}
+
+		[href^="tel:"]:hover::before,
+		[href^="mailto:"]:hover::before {
+			background-color: $color-white;
+		}
+
+		.wp-block-heading {
+			margin: 0 0 rem(15px);
+			font-size: rem(34px);
+			line-height: rem(44px);
+
+			@include large {
+				margin: 0 0 rem(30px);
+				font-size: rem(44px);
+				line-height: rem(54px);
+			}
+		}
+
+		.text-large {
+			font-size: rem(20px);
+			font-weight: $light;
+			line-height: rem(30px);
+		}
+	}
+
+	.columns-inner {
+		.wp-block-column:first-child {
+			position: relative;
+			flex-basis: 50%;
+			padding-right: rem(60px);
+		}
+
+		.wp-block-column:last-child {
+			flex-basis: 50%;
+			padding: rem(20px) rem(30px);
+			border-radius: rem(10px);
+			background-color: $color-lighter;
+			font-size: rem(16px);
+			line-height: rem(26px);
+
+			@include large {
+				padding: rem(40px);
+			}
+		}
+
+		.wp-block-heading {
+			display: flex;
+			align-items: flex-end;
+			margin: 0;
+			padding-top: rem(7px);
+			font-size: rem(20px);
+			line-height: rem(28px);
+		}
+
+		p {
+			color: $color-grey;
+			font-size: rem(18px);
+			line-height: rem(28px);
+		}
+
+		svg {
+			display: inline-block;
+			width: rem(40px);
+			height: auto;
+			margin-right: rem(10px);
+		}
+
+		.svg-heading {
+			display: flex;
+			align-items: center;
+			margin-bottom: rem(15px);
+		}
+	}
+}

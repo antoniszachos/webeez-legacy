@@ -1,0 +1,62 @@
+@use '../abstracts' as *;
+
+.fill-primary {
+	transition: all 0.3s ease-in-out;
+	fill: $color-primary;
+}
+
+.fill-secondary {
+	transition: all 0.3s ease-in-out;
+	fill: $color-secondary;
+}
+
+.fill-white {
+	fill: $color-white;
+}
+
+.fill-dark {
+	transition: all 0.5s ease;
+	fill: $color-dark;
+}
+
+.text-highlighted {
+	margin: 0;
+	color: $color-primary;
+	font-size: rem(14px);
+	font-weight: $bold;
+	text-align: center;
+
+	strong {
+		display: block;
+		color: $color-darker;
+		font-size: rem(36px);
+		font-weight: $regular;
+		line-height: rem(36px);
+	}
+}
+
+.sr-only {
+	display: none;
+}
+
+.body-overlay {
+	visibility: hidden;
+	position: fixed;
+	z-index: 400;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1), visibility 0s cubic-bezier(0.19, 1, 0.22, 01) 0.5s, z-index 0s cubic-bezier(0.19, 1, 0.22, 1) 0.5s, top 0s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+	opacity: 0;
+	background-color: rgba($color-black, 0.6);
+
+	&--visible {
+		visibility: visible;
+		transition-delay: 0s;
+		opacity: 1;
+	}
+}
+

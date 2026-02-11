@@ -1,0 +1,50 @@
+@use '../abstracts' as *;
+
+.section-mission {
+	.wp-block-columns {
+		margin: 0;
+
+		p {
+			margin: 0;
+
+			@include xxlarge {
+				width: 50%;
+			}
+		}
+	}
+
+	.wp-block-column {
+		display: flex;
+		flex-direction: column;
+		padding: rem(50px) rem(15px);
+
+		@include xxlarge {
+			padding: rem(100px);
+		}
+	}
+
+	.wp-block-column:nth-child(odd) {
+		align-items: flex-end;
+		background-color: $color-darker;
+		color: $color-white;
+		text-align: right;
+
+		@include large {
+			padding-right: rem(30px);
+		}
+
+		a {
+			color: $color-white;
+			text-decoration: underline;
+		}
+	}
+
+	.wp-block-column:nth-child(even) {
+		background-color: $color-lighter;
+		color: $color-darker;
+
+		@include large {
+			padding-left: rem(30px);
+		}
+	}
+}

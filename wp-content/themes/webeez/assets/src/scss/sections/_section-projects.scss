@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.section-projects {
+	padding: rem(60px) 0 rem(30px);
+
+	@include large {
+		padding: rem(120px) 0 rem(60px);
+	}
+
+	.section-tagline {
+		text-align: center;
+	}
+
+	.wp-block-heading {
+		margin-bottom: rem(40px);
+		font-size: rem(34px);
+		text-align: center;
+	}
+
+	&--alt {
+		padding: rem(60px) 0;
+	}
+
+	.wp-block-buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: rem(40px) 0 0;
+	}
+}

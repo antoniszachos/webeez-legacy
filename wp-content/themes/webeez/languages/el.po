@@ -1,0 +1,121 @@
+# Copyright (C) 2022 The Webeez Team
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Webeez 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/webeez\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-07-21T19:53:49+03:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: webeez\n"
+
+# Content
+
+msgid "Skip to navigation"
+msgstr "Μετάβαση στην πλοήγηση"
+
+msgid "Skip to content"
+msgstr "Μετάβαση στο περιεχόμενο"
+
+msgid "Scroll to top"
+msgstr "Μετάβαση στην κορυφή της σελίδας"
+
+msgid "Navigate to Home Page"
+msgstr "Μετάβαση στην Αρχική Σελίδα"
+
+msgid "You are here"
+msgstr "Βρίσκεστε Εδώ"
+
+# Menus
+
+msgid "Primary Menu"
+msgstr "Κεντρικό Μενού"
+
+msgid "Mobile Menu"
+msgstr "Μενού για κινητά"
+
+# Widgets
+
+msgid "Telephone"
+msgstr "Τηλέφωνο"
+
+msgid "Services Sidebar"
+msgstr "Πλευρική στήλη υπηρεσιών"
+
+msgid "Footer Sidebar 1"
+msgstr "Στήλη Υποσέλιδου 1"
+
+msgid "Footer Sidebar 2"
+msgstr "Στήλη Υποσέλιδου 2"
+
+msgid "Footer Sidebar 3"
+msgstr "Στήλη Υποσέλιδου 3"
+
+msgid "Footer Sidebar 4"
+msgstr "Στήλη Υποσέλιδου 4"
+
+msgid "Footer Sidebar Bottom Left"
+msgstr "Στήλη Υποσέλιδου Κάτω Αριστερά"
+
+msgid "Footer Sidebar Bottom Right"
+msgstr "Στήλη Υποσέλιδου Κάτω Δεξιά"
+
+# Mobile Menu
+
+msgid "Show mobile menu"
+msgstr "Εμφάνιση μενού για κινητά"
+
+msgid "Hide mobile menu"
+msgstr "Απόκρυψη μενού για κινητά"
+
+msgid "Show sub menu"
+msgstr "Εμφάνιση υπο-μενού"
+
+msgid "View More"
+msgstr "Δείτε Περισσότερα"
+
+# Project
+
+msgid "Client:"
+msgstr "Πελάτης:"
+
+msgid "Category:"
+msgstr "Κατηγορία:"
+
+msgid "Date:"
+msgstr "Ημερομηνία:"
+
+msgid "Visit Website"
+msgstr "Επισκεφθείτε το"
+
+#Share
+
+msgid "Share on Facebook"
+msgstr "Μοιραστείτε το στο Facebook"
+
+msgid "Share on Twitter"
+msgstr "Μοιραστείτε το στο Twitter"
+
+msgid "Share on Pinterest"
+msgstr "Μοιραστείτε το στο Pinterest"
+
+msgid "Share on LinkedIn"
+msgstr "Μοιραστείτε το στο LinkedIn"
+
+# Page Templates
+
+msgid "Page template for Services"
+msgstr "Πρότυπο σελίδας για Υπηρεσίες"
+
+# CTA
+
+msgid "Let's put your idea into practice!"
+msgstr "Ας κάνουμε την ιδέα σας πράξη!"
+
+msgid "Contact Us Today"
+msgstr "Επικοινωνήστε Σήμερα"

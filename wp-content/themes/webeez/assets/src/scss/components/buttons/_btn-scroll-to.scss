@@ -1,0 +1,39 @@
+@use "../../abstracts" as *;
+
+.btn-scroll-to {
+	display: block;
+	position: absolute;
+	bottom: 7rem;
+	left: 50%;
+	width: rem(25px);
+	height: auto;
+	padding-bottom: rem(30px);
+	transform: translateX(-50%);
+	cursor: pointer;
+
+	@include large {
+		bottom: rem(15px);
+	}
+
+	@keyframes moveupdown {
+		0% {
+			bottom: 0;
+		}
+
+		50% {
+			bottom: rem(5px);
+		}
+	  }
+
+	&::after {
+		content: "\e907";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		animation: moveupdown 1s linear infinite;
+		color: $color-white;
+		font-family: $font-icons;
+		font-size: rem(18px);
+	}
+}

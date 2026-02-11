@@ -1,0 +1,33 @@
+@use "../../abstracts" as *;
+
+.wp-block-group {
+	position: relative;
+
+	&.alignwide {
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: rem(15px);
+		padding-left: rem(15px);
+
+		@include mobile-only {
+			max-width: rem(540px);
+		}
+
+		@include tablet {
+			max-width: rem(720px);
+		}
+
+		@include large {
+			max-width: rem(960px);
+		}
+
+		@include xlarge {
+			max-width: rem(1140px);
+		}
+
+		@include xlarge {
+			max-width: rem(1320px);
+		}
+	}
+}

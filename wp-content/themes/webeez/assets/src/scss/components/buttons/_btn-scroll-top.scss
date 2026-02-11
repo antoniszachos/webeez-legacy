@@ -1,0 +1,58 @@
+@use "../../abstracts" as *;
+
+.btn-scroll-top {
+	display: block;
+	position: fixed;
+	z-index: 101;
+	right: rem(25px);
+	bottom: rem(25px);
+	width: rem(40px);
+	height: rem(40px);
+	overflow: hidden;
+	transition: all 0.3s ease-out;
+	border: 0;
+	border-radius: rem(25px);
+	opacity: 0;
+	background-color: $color-primary;
+	color: $color-white;
+	line-height: rem(40px);
+
+	&--visible {
+		opacity: 1;
+	}
+
+	&::before,
+	&::after {
+		display: block;
+		color: $color-white;
+		font-family: $font-icons;
+	}
+
+	&::before {
+		content: "\e90b";
+		transition: all 0.1s ease-in-out 0.5s;
+	}
+
+	&::after {
+		content: "\e910";
+		display: block;
+		transform: rotate(-90deg);
+		transition: all 0.5s ease-in-out;
+		opacity: 0;
+		font-size: rem(21px);
+	}
+
+	&:hover {
+		height: rem(80px);
+	}
+
+	&:hover::before {
+		opacity: 0;
+	}
+
+	&:hover::after {
+		margin-top: rem(-32px);
+		opacity: 1;
+	}
+
+}

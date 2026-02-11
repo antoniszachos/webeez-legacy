@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.section-404 {
+	h1 {
+		color: $color-white;
+		font-size: rem(200px);
+		font-weight: $regular;
+		-webkit-text-fill-color: $color-white;
+		-webkit-text-stroke-color: $color-primary;
+		-webkit-text-stroke-width: rem(2px);
+
+		@include large {
+			font-size: rem(220px);
+		}
+	}
+}

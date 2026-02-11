@@ -1,0 +1,157 @@
+@use '../abstracts' as *;
+
+.section-intro {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+	background-color: $color-dark;
+
+	&::before {
+		@include xxxlarge {
+			content: "";
+			position: absolute;
+			z-index: 10;
+			top: rem(220px);
+			left: rem(-230px);
+			width: rem(302px);
+			height: rem(302px);
+			border-radius: 50%;
+			background-color: $color-primary;
+
+		}
+	}
+
+	&::after {
+		@include large {
+			content: "";
+			position: absolute;
+			z-index: 10;
+			top: rem(250px);
+			right: rem(-430px);
+			width: rem(492px);
+			height: rem(492px);
+			border-radius: 50%;
+			background-color: $color-primary;
+		}
+
+		@include xxlarge {
+			top: rem(160px);
+			width: rem(542px);
+			height: rem(542px);
+		}
+	}
+
+	.wp-block-cover {
+		height: 100vh;
+
+		&::before {
+			@include xxxlarge {
+				content: "";
+				position: absolute;
+				z-index: 2;
+				top: calc(100vh - 550px);
+				left: calc(-207.5px);
+				width: rem(415px);
+				height: rem(415px);
+				border: rem(1px) solid $color-white;
+				border-radius: 50%;
+			}
+		}
+
+		&::after {
+			@include large {
+				content: "";
+				position: absolute;
+				z-index: 2;
+				top: rem(-120px);
+				right: rem(-250px);
+				width: rem(550px);
+				height: rem(550px);
+				border: rem(1px) solid $color-white;
+				border-radius: 50%;
+			}
+
+			@include xxlarge {
+				width: rem(550px);
+				height: rem(550px);
+			}
+
+			@include xxxlarge {
+				width: rem(750px);
+				height: rem(750px);
+			}
+		}
+
+		.wp-block-group {
+			margin-top: -8rem;
+			padding: 0;
+
+			@include large {
+				margin-top: 0;
+			}
+		}
+
+		.wp-block-buttons {
+			animation: 1s 2s fadeIn both;
+		}
+
+		.slide-tagline {
+			margin-bottom: rem(24px);
+			animation: 1s 0.5s fadeInUp both;
+			font-weight: $semi-bold;
+			letter-spacing: rem(0.6px);
+
+			@include large {
+				font-size: rem(14px);
+				line-height: rem(20px);
+			}
+
+			@include xxlarge {
+				font-size: rem(16px);
+				line-height: rem(24px);
+			}
+		}
+
+		.wp-block-heading {
+			margin-bottom: rem(24px);
+			animation: 1s 1s zoomIn both;
+			font-size: rem(44px);
+			font-weight: $ultra-bold;
+			line-height: rem(52px);
+
+			@include large {
+				font-size: rem(48px);
+				line-height: rem(60px);
+			}
+
+			@include xxlarge {
+				font-size: rem(64px);
+				line-height: rem(72px);
+			}
+		}
+
+		p {
+			margin-bottom: rem(24px);
+			animation: 1s 1s fadeInUp both;
+			font-size: rem(16px);
+			font-weight: $light;
+			line-height: rem(24px);
+
+			@include large {
+				width: 50%;
+				font-size: rem(18px);
+				line-height: rem(28px);
+			}
+
+			@include xxlarge {
+				width: 60%;
+				font-size: rem(20px);
+				line-height: rem(28px);
+			}
+		}
+	}
+
+	.wp-block-cover__inner-container {
+		position: static;
+	}
+}

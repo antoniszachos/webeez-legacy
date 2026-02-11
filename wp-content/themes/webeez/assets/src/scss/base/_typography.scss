@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+html {
+	font-size: $base-size;
+}
+
+body {
+	color: $color-darker;
+	font-family: $font-stack;
+	font-size: rem(18px);
+	font-weight: $regular;
+	line-height: $line-height;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	line-height: rem(28px);
+}
+
+@include headings {
+	font-weight: $bold;
+}

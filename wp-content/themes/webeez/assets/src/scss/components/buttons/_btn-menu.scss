@@ -1,0 +1,44 @@
+@use "../../abstracts" as *;
+
+.btn-menu {
+	display: block;
+	position: relative;
+	width: rem(28px);
+	height: rem(18px);
+
+	@include large {
+		display: none;
+	}
+
+	span {
+		display: block;
+		position: absolute;
+		height: rem(1px);
+		background-color: $color-white;
+
+		&:nth-child(1) {
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+
+		&:nth-child(3) {
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	.grow {
+		top: calc(50% - 0.5px);
+		right: 0;
+		width: 60%;
+		transition: width 0.3s linear;
+	}
+
+	&--open {
+		.grow {
+			width: 100%;
+		}
+	}
+}

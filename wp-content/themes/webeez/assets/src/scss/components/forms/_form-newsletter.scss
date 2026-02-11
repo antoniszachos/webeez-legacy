@@ -1,0 +1,88 @@
+@use "../../abstracts" as *;
+
+.mailerlite-form {
+	padding: rem(30px) rem(40px);
+	background-color: rgba($color-darker, 0.5);
+
+	.mailerlite-form-title {
+		h3 {
+			margin-bottom: rem(30px);
+			color: $color-white;
+			font-size: rem(17px);
+			font-weight: $bold;
+			letter-spacing: rem(0.4px);
+			line-height: rem(31px);
+		}
+	}
+
+	.mailerlite-form-description {
+		display: none;
+	}
+
+	.mailerlite-form-inputs {
+		display: flex;
+		position: relative;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.mailerlite-form-field {
+		width: 100%;
+
+		label {
+			display: none;
+		}
+
+		[type="email"] {
+			width: 100%;
+			padding: rem(7px) rem(30px) rem(7px) 0;
+			border: 0;
+			border-bottom: rem(4px) solid $color-grey-dark;
+			background-color: transparent;
+			color: $color-grey-light;
+			font-size: rem(16px);
+		}
+
+		[type="email"]::placeholder {
+			color: $color-grey-light;
+		}
+
+		[type="email"]:active,
+		[type="email"]:focus {
+			border-color: $color-primary;
+			outline: 0;
+		}
+	}
+
+	.mailerlite-subscribe-submit {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: rem(7.5px);
+		border: 0;
+		background-color: transparent;
+		color: $color-darker;
+		font-size: 0;
+
+		&::before {
+			content: "\e909";
+			color: $color-white;
+			font-family: $font-icons;
+			font-size: rem(16px);
+		}
+	}
+
+	.mailerlite-form-error {
+		margin-top: rem(7.5px);
+		color: $color-primary;
+		font-size: rem(14px);
+	}
+
+	.mailerlite-form-response {
+		text-align: left;
+
+		h4 {
+			font-size: rem(18px);
+		}
+	}
+}

@@ -1,0 +1,158 @@
+@use '../abstracts' as *;
+
+.site-header {
+	display: flex;
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: rem(70px);
+	padding: 0 rem(15px);
+	box-shadow: 0 0 rem(17px) rem(-1px) rgba($color-darker, 0.4);
+
+	@include xxlarge {
+		height: rem(85px);
+		padding: 0 rem(60px);
+	}
+
+	&.site-header--home {
+		background-color: rgba($color-dark, 0.5);
+	}
+
+	&:not(.site-header--home) {
+		background-color: $color-dark;
+	}
+
+	&__left {
+		display: flex;
+		flex: 1 1 0;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	&__center {
+		display: none;
+
+		@include large {
+			display: flex;
+			flex: 2 1 0;
+			justify-content: center;
+		}
+	}
+
+	&__right {
+		display: flex;
+		position: relative;
+		flex: 1 1 0;
+		justify-content: flex-end;
+	}
+
+	&--sticky {
+		position: fixed;
+		animation: fadeInDown;
+		animation-duration: 0.5s;
+		background-color: $color-dark;
+
+		.scroll-indicator {
+			opacity: 1;
+		}
+
+		.nav-primary__dropdown {
+			padding-top: rem(5px);
+		}
+
+		&.site-header--home {
+			background-color: $color-dark;
+		}
+	}
+
+	.site-phone {
+		display: none;
+
+		@include large {
+			display: flex;
+			padding: rem(3px) 0 rem(3px) rem(30px);
+			border-left: rem(1px) solid rgba($color-white, 0.1);
+		}
+
+		a {
+			color: $color-white;
+			font-size: rem(16px);
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.site-phone__icon {
+		display: block;
+		width: rem(18px);
+		height: auto;
+		margin-right: rem(15px);
+
+		.path-phone {
+			transition: fill 0.3s ease-in-out;
+			fill: $color-white;
+		}
+
+		.path-line-small {
+			transition: fill 0.3s ease-in-out 0.1s;
+			fill: $color-white;
+		}
+
+		.path-line-large {
+			transition: fill 0.3s ease-in-out 0.2s;
+			fill: $color-white;
+		}
+
+	}
+
+	.site-phone:hover {
+		color: $color-primary;
+
+		.path-phone {
+			fill: $color-primary;
+		}
+
+		.path-line-small {
+			fill: $color-secondary;
+		}
+
+		.path-line-large {
+			fill: $color-secondary;
+		}
+
+		a {
+			color: $color-primary;
+		}
+	}
+
+	.nav-social {
+		display: none;
+
+		@include large {
+			display: block;
+			padding-left: rem(23px);
+		}
+
+		.menu-item {
+			margin: 0 rem(10px);
+		}
+
+		a {
+			color: $color-white;
+		}
+
+		a:hover::before {
+			color: $color-primary;
+		}
+	}
+
+}
