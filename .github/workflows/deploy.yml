@@ -12,10 +12,6 @@ jobs:
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
-
-      # ----------------------------------------------------------------
-      # ΒΗΜΑ 1: Ανέβασμα του THEME (Webeez)
-      # ----------------------------------------------------------------
       - name: 🎨 Deploy Webeez Theme
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -23,24 +19,14 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
-
-          # Ποιον φάκελο παίρνουμε από το GitHub;
           local-dir: ./wp-content/themes/webeez/
-
-          # Πού το βάζουμε στον Server; (Τσέκαρε το path!)
           server-dir: ./webeez.gr/public_html/wp-content/themes/webeez/
-
-          # Τι ΝΑ ΜΗΝ ανεβάσει (Εξαιρέσεις)
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
-            .DS_Store
-            assets/src/** # <--- Η ΕΞΑΙΡΕΣΗ ΠΟΥ ΖΗΤΗΣΕΣ (To src δεν ανεβαίνει)
-
-      # ----------------------------------------------------------------
-      # ΒΗΜΑ 2: Ανέβασμα του PLUGIN (Webeez Addons)
-      # ----------------------------------------------------------------
+            **/.DS_Store
+            **/assets/src/** #
       - name: 🧩 Deploy Webeez Addons Plugin
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -48,14 +34,9 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
-
-          # Ποιον φάκελο παίρνουμε;
           local-dir: ./wp-content/plugins/webeez-addons/
-
-          # Πού το βάζουμε;
           server-dir: ./webeez.gr/public_html/wp-content/plugins/webeez-addons/
-
           exclude: |
             **/.git*
             **/.git*/**
-            .DS_Store
+            **/.DS_Store

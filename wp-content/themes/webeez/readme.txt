@@ -10,6 +10,10 @@ Webeez is a custom theme for Wordpress. Designed & Developed by Webeez
 
 == Changelog ==
 
+= 1.0.5 - 2026-02-11 =
+* Fixed: Scroll to bottom positioning
+* Tweak: Spheres and circles in section intro
+
 = 1.0.4 - 2024-11-13 =
 * Fixed: Section CTA un-clickable button on large devices
 * Fixed: Section CTA button link
