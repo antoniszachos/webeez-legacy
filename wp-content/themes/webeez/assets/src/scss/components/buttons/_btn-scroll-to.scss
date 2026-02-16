@@ -12,7 +12,7 @@
 	cursor: pointer;
 
 	@include large {
-		bottom: rem(5px);
+		bottom: rem(20px);
 	}
 
 	@keyframes moveupdown {
